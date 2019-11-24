@@ -1,0 +1,25 @@
+$font-white: white;
+
+.btn-id {
+  height: 60px !important;
+  width: 100%;
+  border-radius: 30px;
+}
+#linkLogin a{
+  font-size: 16px;
+}
+.card-title {
+  border-bottom: none !important;
+}
+
+#logoLogin {
+  width: 150px;
+  height: 150px;
+}
+.font-white{
+    color: $font-white;
+}
+#cardBody{
+  height: 100vh;
+  overflow: scroll;
+}

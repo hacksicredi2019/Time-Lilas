@@ -1,0 +1,84 @@
+<div id="header">
+  <div class="col-12">
+    <div class="text-center mb-4 " id="cardTop">
+      <div class="row">
+        <div class="col-2 mt-2">
+          <a id="arrowback" [routerLink]="['/chat']"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="mt-2">
+          <h4>Cadastro Escola</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="subtitle">
+    <div class="col-12">
+      <h6>
+        Ajude-nos a melhorar a experiência dos alunos no ensino infantil e
+        fundamenta.
+      </h6>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title p-2">
+    <h6>Cadastre-se e dê sua opinião.</h6>
+  </div>
+  <div class="col-12">
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="email">Nome</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            placeholder="Seu nome"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">CPF</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cpf"
+            placeholder="Seu CPF"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Endereço de email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Seu email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="senha"
+            placeholder="Senha"
+          />
+        </div>
+        <div class="form-group">
+          <label for="confirmacaoSenha">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmacaoSenha"
+            placeholder="Confirmação de senha."
+          />
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary btnSubmit" (click)="voltar()" >
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.btnSubmit {
+  width: 50%;
+  border-radius: 50px;
+  background-color: #c265fe;
+  border: #c265fe;
+
+  &:active{
+      background-color:#592E74 !important;
+  }
+}
+#arrowback{
+    text-decoration: none !important;
+    color: black;
+}
+#cardTop{
+    border-bottom: none !important;
+}
+.card-title {
+  background-color: #c265fe;
+  width: 100% !important;
+  color: white;
+}
+

@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-2 bg-light">
+        <h2 (click)="voltar()"><i class="fas fa-arrow-left"></i></h2>
+    </div>
+    <div class="col-10 text-center bg-light mb-2">
+        <h2 class="titulo-upper pt-2" >{{escola.name}}</h2>
+    </div>
+</div>
+<div class="card mb-3" >
+        <img class="card-img-top" src="../../../assets/img/colegio.jpg" alt="Card image cap">
+        <div class="row">
+            <div class="col-12">
+                <div class="circulo rounded-circle">
+                    <h3 class="text-center nota">7,5</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{escola.description}}</p>
+          <div class="card border-secondary mb-3 mr-2 ml-2" *ngFor="let detalhe of detalhes; let i = index">
+                <div class="card-header titulo-upper">
+                    <span class="mr-3 icone-interno">
+                        <i class="fas fa-chart-line" *ngIf="detalhe.category === 'rating'"></i>
+                        <i class="fas fa-chart-line" *ngIf="detalhe.category === 'performance'"></i>
+                        <i class="fab fa-accessible-icon" *ngIf="detalhe.category === 'accessibility'"></i>
+                        <i class="fas fa-leaf" *ngIf="detalhe.category === 'teaching'"></i>
+                    </span>
+                     {{detalhe.name}}
+                </div>
+                <div class="card-body text-secondary">
+                  <div class="card-text">
+                        <ul>
+                          <li>1000 alunos</li>
+                          <li>Quadro de professores</li>
+                        </ul>
+                  </div>
+                  <button class="btn btn-secondary btn-sm float-right">Saiba mais</button>
+                </div>
+           </div>
+        </div>
+</div>

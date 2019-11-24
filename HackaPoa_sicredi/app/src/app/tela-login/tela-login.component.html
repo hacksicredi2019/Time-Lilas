@@ -1,0 +1,39 @@
+<div class="card" id="cardBody">
+  <div class="card-title mb-5">
+    <div id="linkLogin" class="mt-4 text-right">
+      <div class="col-11">
+        <a [routerLink]="['/login']">Login</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-5 text-center">
+    <div class="col-md-6 mt-4">
+      <div id="logo" class="mb-4 ">
+        <img
+          id="logoLogin"
+          src="../assets/img/escola.png"
+          alt="logo do projeto"
+        />
+      </div>
+      <div class="title">
+        <h2>Seja bem vindo !</h2>
+      </div>
+    </div>
+    <div class="col-sm-12 mt-5 mb-4">
+      <a routerLink="./chat">
+        <button
+          type="button"
+          class="btn btn bg-danger btn-id font-white"
+          (click)="(direcionarFamilia)">
+          Começar
+        </button></a>
+    </div>
+    <div class="footer-login mt-5">
+      <div id="content-footer" class="mb-5">
+        <p>Uma parceria:</p>
+        <p>SICRED</p>
+        <p>Prefeitura de Porto Alegre</p>
+      </div>
+    </div>
+  </div>
+</div>

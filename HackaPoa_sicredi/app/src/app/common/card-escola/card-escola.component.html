@@ -1,0 +1,25 @@
+<div class="card mt-5 mr-2 ml-2" *ngFor="let escola of escolas; let i = index">
+    <div class="card-body"  (click)="abrirDetalhes(escola.id)">
+            <p class="badge badge-danger info-categoria">{{escola.category}}</p>
+            <div class="row">
+                <div class="col-8">
+                        <strong class="">{{escola.name}}</strong>
+                        <p class="card-text">Tipo escola</p>
+                </div>
+                <div class="col-4 text-right">
+                    <p><strong>{{escola.rating}}</strong> <br>
+                        <span><i class="fas fa-user-friends"></i></span> 8 Vagas
+                        <br>5 km
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-right">
+                    <span class="mr-2"><i class="fab fa-accessible-icon"></i></span>
+                    <span class="mr-2"><i class="fas fa-leaf"></i></span>
+                    <span class="mr-2"><i class="fas fa-chart-line"></i></span>
+                    <span class="mr-2"><i class="fas fa-file"></i></span>
+                </div>
+            </div>
+    </div>
+</div>

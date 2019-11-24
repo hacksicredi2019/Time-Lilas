@@ -1,0 +1,24 @@
+<div class="row mt-4 ml-2">
+  <div class="col-2">
+    <div id="imgChatBot">
+      <img
+        id="iconAtendente"
+        src="../../assets/img/user-icon.png"
+        alt="Imagem referente ao atendente."
+      />
+    </div>
+  </div>
+  <div class="col-9">
+    <p>
+      {{ mensagem }}
+    </p>
+    <div class="row">
+      <div class="col-12 text-right">
+        <button type="button" class="btn btn-primary mr-1 btnRadius" (click)="direcionaEscola()">
+          Opção 1
+        </button>
+        <button type="button" class="btn btn-primary btnRadius" (click)="direionarResponsavel()">Opção 2</button>
+      </div>
+    </div>
+  </div>
+</div>

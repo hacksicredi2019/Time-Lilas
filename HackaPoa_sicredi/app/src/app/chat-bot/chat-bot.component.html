@@ -1,0 +1,374 @@
+<div class="col-12">
+  <div id="cabecalhoChat" class="mt-5">
+    <div class="row mr-3" id="rowCabecalho">
+      <div class="input-group flex-nowrap" id="spambarraPesquisa">
+        <div class="input-group-prepend">
+          <span class="input-group-text">@</span>
+        </div>
+        <input
+          id="barraPesquisa"
+          type="text"
+          class="form-control"
+          placeholder="Buscar Escola"
+          aria-label="Buscar escola."
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+      <div id="linkPular" class="ml-auto mt-2">
+        <a (click)="salvaPesquisaParcial()">Pular</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- inicio apresentação 0 -->
+  <div id="bodyChat mt-2">
+    <div class="row mt-4 ml-2">
+      <div class="col-2">
+        <div id="imgChatBot">
+          <img
+            id="iconAtendente"
+            src="../../assets/img/user-icon.png"
+            alt="Imagem referente ao atendente."
+          />
+        </div>
+      </div>
+      <div class="col-9">
+        <p>
+          Olá, somos o app EducaJuntos. Aqui você irá encontrar a melhor escolha
+          para seu filho.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- fim apresentação -->
+
+ <!-- inicio apresentação 1 -->
+ <div id="bodyChat mt-2">
+    <div class="row mt-4 ml-2">
+      <div class="col-2">
+        <div id="imgChatBot">
+          <img
+            id="iconAtendente"
+            src="../../assets/img/user-icon.png"
+            alt="Imagem referente ao atendente."
+          />
+        </div>
+      </div>
+      <div class="col-9">
+        <p>
+          Qual a sua relação com o aluno ?
+        </p>
+        <div class="row">
+          <div class="col-6 text-center">
+            <button
+              type="button"
+              style="width: 120px;"
+              class="btn btn-primary mr-1 btnRadius"
+              (click)="direcionaEscola()">
+              Professor
+            </button>
+          </div>
+          <div class="col-6 text-center">
+            <button
+              type="button"
+              style="width: 120px;"
+              class="btn btn-primary btnRadius"
+              (click)="direcionaPerguntas()">
+              Responsável
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fim apresentação 1 -->
+
+  <!-- inicio apresentação 1 -->
+  <div id="bodyChat mt-2" *ngIf="clicou0">
+    <div class="row mt-4 ml-2">
+      <div class="col-2">
+        <div id="imgChatBot">
+          <img
+            id="iconAtendente"
+            src="../../assets/img/user-icon.png"
+            alt="Imagem referente ao atendente."
+          />
+        </div>
+      </div>
+      <div class="col-9">
+        <p>
+          Qual o seu nível de interesse com a alimentação ?
+        </p>
+        <div class="row">
+          <div class="col-12 text-right">
+            <button
+              type="button"
+              class="btn btn-primary mr-1 btnRadius"
+              (click)="retornoPergunta1('Baixo')"
+            >
+              Baixo
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius"
+              (click)="retornoPergunta1('Medio')"
+            >
+              Medio
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius ml-2"
+              (click)="retornoPergunta1('Alto')"
+            >
+              Alto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fim apresentação 1 -->
+
+  <!-- inicio apresentação 2 -->
+  <div id="bodyChat mt-2" *ngIf="clicou1">
+    <div class="row mt-4 ml-2">
+      <div class="col-2">
+        <div id="imgChatBot">
+          <img
+            id="iconAtendente"
+            src="../../assets/img/user-icon.png"
+            alt="Imagem referente ao atendente."
+          />
+        </div>
+      </div>
+      <div class="col-9">
+        <p>
+          Qual seu nível de interesse com a seguraça do aluno ?
+        </p>
+        <div class="row">
+          <div class="col-12 text-right">
+            <button
+              type="button"
+              class="btn btn-primary mr-1 btnRadius"
+              (click)="retornoPergunta2('Baixo')"
+            >
+              Baixo
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius"
+              (click)="retornoPergunta2('Medio')"
+            >
+              Médio
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius ml-2"
+              (click)="retornoPergunta2('Alto')"
+            >
+              Alto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- fim apresentação 2 -->
+
+  <!-- inicio apresentação 3 -->
+  <div id="bodyChat mt-2" *ngIf="clicou2">
+    <div class="row mt-4 ml-2">
+      <div class="col-2">
+        <div id="imgChatBot">
+          <img
+            id="iconAtendente"
+            src="../../assets/img/user-icon.png"
+            alt="Imagem referente ao atendente."
+          />
+        </div>
+      </div>
+      <div class="col-9">
+        <p>
+          Qual seu nível de interesse com a qualidade de ensino do aluno ?
+        </p>
+        <div class="row">
+          <div class="col-12 text-right">
+            <button
+              type="button"
+              class="btn btn-primary mr-1 btnRadius"
+              (click)="retornoPergunta3('Baixo')"
+            >
+              Baixo
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius"
+              (click)="retornoPergunta3('Medio')"
+            >
+              Médio
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius ml-2"
+              (click)="retornoPergunta3('Alto')"
+            >
+              Alto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- fim apresentação 3 -->
+
+  <!-- inicio apresentação 4 -->
+  <div id="bodyChat mt-2" *ngIf="clicou3">
+    <div class="row mt-4 ml-2">
+      <div class="col-2">
+        <div id="imgChatBot">
+          <img
+            id="iconAtendente"
+            src="../../assets/img/user-icon.png"
+            alt="Imagem referente ao atendente."
+          />
+        </div>
+      </div>
+      <div class="col-9">
+        <p>
+          Qual seu nível de interesse com a infraestrutura da escola ?
+        </p>
+        <div class="row">
+          <div class="col-12 text-right">
+            <button
+              type="button"
+              class="btn btn-primary mr-1 btnRadius "
+              (click)="retornoPergunta4('Baixo')"
+            >
+              Baixo
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius"
+              (click)="retornoPergunta4('Medio')"
+            >
+              Médio
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius ml-2"
+              (click)="retornoPergunta4('Alto')"
+            >
+              Alto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- fim apresentação 4 -->
+
+  <!-- inicio apresentação 5 -->
+  <div id="bodyChat mt-2" *ngIf="clicou4">
+    <div class="row mt-4 ml-2">
+      <div class="col-2">
+        <div id="imgChatBot">
+          <img
+            id="iconAtendente"
+            src="../../assets/img/user-icon.png"
+            alt="Imagem referente ao atendente."
+          />
+        </div>
+      </div>
+      <div class="col-9">
+        <p>
+          Qual seu nível de interesse com a localização da escola ?
+        </p>
+        <div class="row">
+          <div class="col-12 text-right">
+            <button
+              type="button"
+              class="btn btn-primary mr-1 btnRadius"
+              (click)="retornoPergunta5('Baixo')"
+            >
+              Baixo
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius"
+              (click)="retornoPergunta5('Medio')"
+            >
+              Médio
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius ml-2"
+              (click)="retornoPergunta5('Alto')"
+            >
+              Alto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- fim apresentação 5 -->
+
+  <!-- inicio apresentação 6 -->
+  <div id="bodyChat mt-2" *ngIf="clicou5">
+    <div class="row mt-4 ml-2">
+      <div class="col-2">
+        <div id="imgChatBot">
+          <img
+            id="iconAtendente"
+            src="../../assets/img/user-icon.png"
+            alt="Imagem referente ao atendente."
+          />
+        </div>
+      </div>
+      <div class="col-9">
+        <p>
+          Qual seu nível de interesse nos comentários de outras pessoas quanto a
+          escola ?
+        </p>
+        <div class="row">
+          <div class="col-12 text-right">
+            <button
+              type="button"
+              class="btn btn-primary mr-1 btnRadius"
+              (click)="retornoPergunta6('Baixo')"
+            >
+              Baixo
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius"
+              (click)="retornoPergunta6('Medio')"
+            >
+              Médio
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btnRadius ml-2"
+              (click)="retornoPergunta6('Alto')"
+            >
+              Alto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- fim apresentação 6 -->
+
+  <!-- <div id="footerChat" class="text-center">
+    <img
+      src="../../assets/img/sound-icon.png"
+      alt="Pressione para auxílio de áudio."
+    />
+  </div> -->
+</div>
