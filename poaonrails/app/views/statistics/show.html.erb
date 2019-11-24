@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Danger district:</strong>
+  <%= @statistic.danger_district %>
+</p>
+
+<p>
+  <strong>Ratings:</strong>
+  <%= @statistic.ratings %>
+</p>
+
+<p>
+  <strong>Security:</strong>
+  <%= @statistic.security %>
+</p>
+
+<p>
+  <strong>Accessibility:</strong>
+  <%= @statistic.accessibility %>
+</p>
+
+<p>
+  <strong>Teaching:</strong>
+  <%= @statistic.teaching %>
+</p>
+
+<p>
+  <strong>Infrastruc:</strong>
+  <%= @statistic.infrastruc %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @statistic.school %>
+</p>
+
+<%= link_to 'Edit', edit_statistic_path(@statistic) %> |
+<%= link_to 'Back', statistics_path %>

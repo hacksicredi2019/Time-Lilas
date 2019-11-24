@@ -1,0 +1,45 @@
+<%= form_for(@statistic) do |f| %>
+  <% if @statistic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@statistic.errors.count, "error") %> prohibited this statistic from being saved:</h2>
+
+      <ul>
+      <% @statistic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :danger_district %><br>
+    <%= f.text_field :danger_district %>
+  </div>
+  <div class="field">
+    <%= f.label :ratings %><br>
+    <%= f.text_field :ratings %>
+  </div>
+  <div class="field">
+    <%= f.label :security %><br>
+    <%= f.text_field :security %>
+  </div>
+  <div class="field">
+    <%= f.label :accessibility %><br>
+    <%= f.text_field :accessibility %>
+  </div>
+  <div class="field">
+    <%= f.label :teaching %><br>
+    <%= f.text_field :teaching %>
+  </div>
+  <div class="field">
+    <%= f.label :infrastruc %><br>
+    <%= f.text_field :infrastruc %>
+  </div>
+  <div class="field">
+    <%= f.label :school_id %><br>
+    <%= f.text_field :school_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
